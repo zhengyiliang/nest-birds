@@ -1,0 +1,19 @@
+# https://editorconfig.org
+#此文件的作用是为了防止团队协作时大家所用ide不同导致代码规范不同
+# 每次合并代码时带来大量的并没有变化的代码合并和不必要的冲突。
+root = true  ##表示为最顶层的配置文件，不会再向上查找
+
+[*]  ## 对所有文件生效
+indent_style = space  ## 设置缩进为空格
+indent_size = 2 ## 设置缩进所占列数为2
+end_of_line = lf ## 表示\n 转义字符、换行
+charset = utf-8 ## 设置为utf-8编码
+trim_trailing_whitespace = true ## 设置去除行尾的空白字符
+insert_final_newline = true ## 设置文件空白行结尾
+
+[*.md] ##以.md结尾的文件生效
+trim_trailing_whitespace = false ## 设置不去除行尾的空白字符
+
+[Makefile] ## 对Makefile文件生效
+indent_style = tab ## 设置缩进为回车
+

@@ -1,0 +1,60 @@
+.visitor-container {
+  background-color: #fff;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .visitor-title {
+    padding: 5px;
+    line-height: 30px;
+    font-weight: 400;
+    border-bottom: 1px solid #e8e9e7;
+    color: #383937;
+    font-size: 18px;
+  }
+  .visitor-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    dl {
+      margin-bottom: 0;
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    dd {
+      width: 65px;
+      height: 65px;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 12px;
+      padding: 5px;
+      margin-bottom: 0;
+      & > span {
+        position: relative;
+        display: inline-block;
+        height: 55px;
+        width: 55px;
+        cursor: pointer;
+      }
+    }
+    img {
+      width: 55px;
+      height: 55px;
+      border-radius: 2px;
+    }
+    cite {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      // width: 100%;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.2);
+      color: #fff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

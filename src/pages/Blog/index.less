@@ -1,0 +1,166 @@
+.blog {
+  display: flex;
+  .left {
+    flex: 1;
+  }
+  .right {
+    padding-left: 2%;
+    width: calc(2% + 300px);
+    height: fit-content;
+  }
+  .article-list {
+    .next-birds-list-item {
+      // padding: 0;
+      display: block;
+      margin-bottom: 10px;
+      overflow: hidden;
+      padding: 20px 30px 25px 30px;
+      position: relative;
+      background-color: #fff;
+
+      .fc-flag {
+        position: absolute;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        width: 74px;
+        background-color: #ff5722;
+        color: #fff;
+        transform: rotate(-45deg);
+        left: -18px;
+        top: 9px;
+      }
+      .title {
+        line-height: 30px;
+        padding: 5px 130px 5px 0;
+        border-bottom: 1px solid #e8e9e7;
+        font-size: 18px;
+        font-weight: 400;
+        span:first-child {
+          font-size: 16px;
+          font-weight: 400;
+          display: inline-block;
+          vertical-align: bottom;
+        }
+        span:nth-child(2) {
+          color: #212220;
+          cursor: pointer;
+          &:hover {
+            color: #6bc30d;
+            text-decoration: underline;
+          }
+        }
+      }
+      .time {
+        font-family: SourceCodeProRegular, Menlo, Monaco, Consolas, 'Courier New', monospace,
+          'Helvetica Neue', Arial, sans-serif;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background-color: #fff;
+        padding: 0 20px 5px 20px;
+        line-height: 32px;
+        .day {
+          display: block;
+          text-align: center;
+          font-weight: 700;
+          font-size: 40px;
+          color: #6bc30d;
+          position: relative;
+          top: 2px;
+        }
+        .month,
+        .year {
+          color: #989997;
+        }
+      }
+      .content {
+        // height: 180px;
+        overflow: hidden;
+        .img-light {
+          margin-bottom: 9px;
+          height: 180px;
+          border: 1px solid #e8e9e7;
+          overflow: hidden;
+          background-size: cover;
+          cursor: pointer;
+          background-position: center;
+          background-repeat: no-repeat;
+          &:after {
+            content: '';
+            height: 100%;
+            width: 100px;
+            transform: skewX(-25deg) translateZ(0);
+            background-image: linear-gradient(
+              90deg,
+              hsla(0, 0%, 100%, 0),
+              hsla(0, 0%, 100%, 0.3) 50%,
+              hsla(0, 0%, 100%, 0)
+            );
+            position: absolute;
+            left: -160%;
+            top: 0;
+            z-index: 1;
+          }
+          &:hover:after {
+            transition: left 1s ease-in-out;
+            left: 160%;
+          }
+        }
+        .content-text {
+          max-height: 180px;
+          margin-bottom: 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 8;
+          line-clamp: 8;
+          padding-left: 10px;
+          -webkit-box-orient: vertical;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .content {
+          .img-light {
+            margin-bottom: 4px;
+            max-height: 120px;
+          }
+
+          .content-text {
+            max-height: 112px;
+            -webkit-line-clamp: 5;
+            line-clamp: 5;
+            padding-left: 0px;
+          }
+        }
+        .title {
+          padding-right: 0;
+        }
+        .time {
+          display: none;
+        }
+      }
+
+      .item-footer {
+        color: #787977;
+        .item-label {
+          .tag {
+            display: inline-block;
+            font-size: 12px;
+            margin-left: 5px;
+            padding: 2px 10px;
+            background-color: #f1f2f0;
+            color: #787977;
+            border-radius: 2px;
+            text-decoration: none;
+            transition: all 0.2s;
+            &:hover {
+              color: #fff;
+              background-color: #6bc30d;
+            }
+          }
+        }
+      }
+    }
+  }
+}

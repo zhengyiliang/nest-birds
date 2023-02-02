@@ -1,0 +1,13 @@
+{
+  "include": ["./src"],
+  "exclude": ["node_modules", "config", "docs", "public", "html"],
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    "experimentalDecorators": true
+  }
+}

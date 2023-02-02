@@ -1,0 +1,5 @@
+*.md
+!**/demo/*.md
+node_modules
+.vscode/
+.husky/

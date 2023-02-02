@@ -1,0 +1,103 @@
+// pc端菜单
+.header-win {
+  display: flex;
+  justify-content: space-between;
+  .win-login {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  // align-items: center;
+}
+
+// 移动端菜单
+.header_logo {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: BarbaraHand;
+  cursor: pointer;
+}
+
+.header-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 102;
+  .mobile-login {
+    font-size: 32px;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    em {
+      display: block;
+      background: #000;
+      width: 26px;
+      height: 2px;
+      line-height: 10px;
+      margin: 0 auto;
+      margin-top: 5px;
+    }
+  }
+
+  .mobile-menu_close em {
+    &:first-child {
+      margin-top: 12px;
+    }
+    &:first-child,
+    &:last-child,
+    &:nth-last-of-type(2) {
+      transform: rotate(0);
+      transition: all 0.5s;
+    }
+  }
+
+  .mobile-menu_open em {
+    margin-top: 0;
+    &:first-child {
+      margin-top: 18px;
+      transform: rotate(45deg);
+      transition: all 0.5s;
+    }
+    &:last-child {
+      display: none;
+    }
+    &:nth-of-type(2) {
+      transform: rotate(-45deg);
+      margin-top: -2px;
+      transition: all 0.5s;
+    }
+  }
+}
+
+.mobile_menu-modal {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 102;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  &.mobile_menu-modal-open {
+    opacity: 1;
+    .mobile_menu-shade {
+      display: block;
+    }
+  }
+}
+
+.mobile_menu-shade {
+  position: fixed;
+  z-index: 101;
+  top: 64px;
+  right: 0;
+  bottom: 0;
+  display: none;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
